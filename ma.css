@@ -1,0 +1,447 @@
+/* ==========================================================================
+   1. PREMIUM DARK & GOLD PALETTE (Premium Design)
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --bg-dark: #0b0b0b; /* ጥልቅ ጥቁር ዳራ */
+  --bg-card: #161616; /* የካርዶች መካከለኛ ጥቁር */
+  --gold-primary: #dfb15b; /* የቅንጦት ወርቃማ ቀለም */
+  --gold-secondary: #c5963f; /* ጥቁር ወርቃማ */
+  --accent-rose: #ff4081; /* ሮዝ-ጎልድ ንክኪ */
+  --text-light: #f5f5f5; /* ዋና ነጭ ጽሑፍ */
+  --text-muted: #a0a0a0; /* ደብዛዛ ጽሑፍ */
+  --border-gold: rgba(223, 177, 91, 0.2);
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  scroll-behavior: smooth;
+}
+
+/* ==========================================================================
+   2. NAVIGATION BAR
+   ========================================================================== */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 8%;
+  background-color: rgba(11, 11, 11, 0.95);
+  border-bottom: 1px solid var(--border-gold);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--text-light);
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: var(--gold-primary);
+  text-shadow: 0 0 10px rgba(223, 177, 91, 0.3);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: var(--gold-primary);
+  text-shadow: 0 0 8px rgba(223, 177, 91, 0.4);
+}
+
+/* Navigation Button */
+.nav-btn {
+  background: linear-gradient(
+    135deg,
+    var(--gold-primary),
+    var(--gold-secondary)
+  );
+  color: #0b0b0b !important;
+  padding: 10px 24px;
+  border-radius: 4px;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(223, 177, 91, 0.2);
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(223, 177, 91, 0.4);
+}
+
+/* ==========================================================================
+   3. HERO SECTION
+   ========================================================================== */
+.hero {
+  background:
+    linear-gradient(to bottom, rgba(11, 11, 11, 0.5), #0b0b0b),
+    url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200")
+      no-repeat center center/cover;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 58px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: var(--text-light);
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 35px;
+  color: var(--text-muted);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.hero-content button {
+  background: linear-gradient(
+    135deg,
+    var(--gold-primary),
+    var(--gold-secondary)
+  );
+  color: #0b0b0b;
+  border: none;
+  padding: 14px 35px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(223, 177, 91, 0.3);
+  transition: all 0.3s ease;
+}
+
+.hero-content button:hover {
+  background: var(--text-light);
+  transform: scale(1.05);
+}
+
+/* ==========================================================================
+   4. FEATURED RENTALS
+   ========================================================================== */
+.rentals {
+  padding: 80px 8%;
+  text-align: center;
+}
+
+.rentals h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 38px;
+  margin-bottom: 45px;
+  position: relative;
+  display: inline-block;
+}
+
+.rentals h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--gold-primary);
+  margin: 10px auto 0 auto;
+}
+
+.rental-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: var(--bg-card);
+  border-radius: 8px;
+  flex: 1;
+  min-width: 250px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  border-color: var(--gold-primary);
+  box-shadow: 0 15px 35px rgba(223, 177, 91, 0.15);
+}
+
+.card-img-container {
+  height: 220px;
+  overflow: hidden;
+}
+
+.card-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .card-img-container img {
+  transform: scale(1.1);
+}
+
+.card-body {
+  padding: 25px 20px;
+  text-align: left;
+}
+
+.card-body h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: var(--text-light);
+}
+
+.card-body .price {
+  color: var(--gold-primary);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+/* ==========================================================================
+   5. ABOUT US SECTION
+   ========================================================================== */
+.about {
+  padding: 90px 15%;
+  text-align: center;
+  background-color: #0f0f0f;
+  border-top: 1px solid rgba(223, 177, 91, 0.05);
+}
+
+.about h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 38px;
+  margin-bottom: 25px;
+}
+
+.about p {
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+/* ==========================================================================
+   6. AUTHENTICATION SECTION
+   ========================================================================== */
+.auth-section {
+  padding: 90px 8%;
+  background-color: var(--bg-dark);
+  border-top: 1px solid rgba(223, 177, 91, 0.05);
+}
+
+.auth-container {
+  background: var(--bg-card);
+  width: 100%;
+  max-width: 1050px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  display: flex;
+  padding: 50px;
+  gap: 50px;
+  border: 1px solid var(--border-gold);
+}
+
+.auth-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-box h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  margin-bottom: 8px;
+  color: var(--text-light);
+}
+
+.auth-box p {
+  color: var(--gold-primary);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.auth-divider {
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(223, 177, 91, 0.2),
+    transparent
+  );
+}
+
+/* Form Styling */
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+  background-color: #1e1e1e;
+  color: var(--text-light);
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 8px rgba(223, 177, 91, 0.2);
+}
+
+/* Auth Buttons */
+.btn-submit {
+  width: 100%;
+  padding: 15px;
+  background: transparent;
+  color: var(--gold-primary);
+  border: 1px solid var(--gold-primary);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+  background: var(--gold-primary);
+  color: #0b0b0b;
+}
+
+.btn-reg {
+  background: linear-gradient(
+    135deg,
+    var(--gold-primary),
+    var(--gold-secondary)
+  );
+  color: #0b0b0b;
+  border: none;
+}
+
+.btn-reg:hover {
+  background: var(--text-light);
+  color: #0b0b0b;
+}
+
+/* Defense Note Styling */
+.defense-wrapper {
+  background-color: #0b0b0b;
+  padding: 10px 8%;
+}
+
+.defense-note {
+  background: rgba(223, 177, 91, 0.02);
+  border: 1px dashed rgba(223, 177, 91, 0.2);
+  padding: 15px;
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 25px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   7. FOOTER & RESPONSIVENESS
+   ========================================================================== */
+footer {
+  background-color: #050505;
+  color: #666;
+  text-align: center;
+  padding: 30px;
+  font-size: 13px;
+  border-top: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+@media (max-width: 850px) {
+  nav {
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .hero-content h1 {
+    font-size: 38px;
+  }
+  .rental-container {
+    flex-direction: column;
+  }
+  .auth-container {
+    flex-direction: column;
+    padding: 35px 20px;
+    gap: 40px;
+  }
+  .auth-divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgba(223, 177, 91, 0.2),
+      transparent
+    );
+  }
+}
